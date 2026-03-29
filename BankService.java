@@ -2,8 +2,7 @@ class BankService {
     BankDAO dao = new BankDAO();
 
     public void createAccount(int accId, int custId, double balance) {
-        dao.accounts.put(accId, new Account(accId, custId, balance));
-        System.out.println("Account Created!");
+        dao.createAccount(accId, custId, balance);
     }
 
     public void deposit(int accId, double amount) {
